@@ -8,39 +8,41 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import HomePage from './views/HomePage';
 import AboutUs from './views/AboutUs';
-import CinemaDetail from './views/CinemaDetail';
-import MovieDetails from './views/MovieDetails';
+import NexusLocationDetail from './views/NexusLocationDetail';
+import BookDetails from './views/BookDetails';
 import Login from './views/Login';
-import SeatSelection from './components/SeatSelection';
-import { useMovies } from './hooks/useMovies';
+import Cart from './views/Cart';
+import { useBooks } from './hooks/useBooks';
 
 // Página de administración protegida
 const AdminPage = () => {
-  const { darkMode } = useMovies();
+  const { darkMode, nexusLocations } = useBooks();
+
+  const totalBooks = Object.values(nexusLocations).reduce((sum, loc) => sum + (loc.books ? loc.books.length : 0), 0);
 
   return (
     <PrivateRoute>
       <div className={`page-container ${darkMode ? 'dark' : ''}`}>
         <div className="movie-details">
-          <h1>Panel de Administración</h1>
-          <p>Contenido solo para administradores</p>
+          <h1>📊 Panel de Administración - Nexus Librería</h1>
+          <p>Bienvenido al panel administrativo</p>
 
           <div className="movie-info-grid">
             <div className="info-item">
               <strong>Usuarios registrados</strong><br/>
-              4 usuarios
+              4 usuarios activos
             </div>
             <div className="info-item">
-              <strong>Películas</strong><br/>
-              12 títulos
+              <strong>Libros en catálogo</strong><br/>
+              {totalBooks} títulos
             </div>
             <div className="info-item">
-              <strong>Ciudades</strong><br/>
+              <strong>Sucursales</strong><br/>
               4 ubicaciones
             </div>
             <div className="info-item">
-              <strong>Reservas hoy</strong><br/>
-              156 entradas
+              <strong>Pedidos hoy</strong><br/>
+              23 compras/reservas
             </div>
           </div>
         </div>
@@ -50,7 +52,7 @@ const AdminPage = () => {
 };
 
 function AppContent() {
-  const { darkMode } = useMovies();
+  const { darkMode } = useBooks();
 
   return (
     <div className={`App ${darkMode ? 'dark' : ''}`}>
@@ -60,20 +62,13 @@ function AppContent() {
         <Route path="/" element={<HomePage />} />
         <Route path="/login" element={<Login />} />
         <Route path="/about" element={<AboutUs />} />
-        <Route path="/movie/:id" element={<MovieDetails />} />
+        <Route path="/book/:id" element={<BookDetails />} />
+        <Route path="/cart" element={<Cart />} />
         <Route
-          path="/cinema/:city"
+          path="/location/:city"
           element={
             <PrivateRoute>
-              <CinemaDetail />
-            </PrivateRoute>
-          }
-        />
-        <Route
-          path="/movie/:id/session/:time"
-          element={
-            <PrivateRoute>
-              <SeatSelection />
+              <NexusLocationDetail />
             </PrivateRoute>
           }
         />

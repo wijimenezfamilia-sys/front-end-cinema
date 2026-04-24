@@ -1,29 +1,29 @@
 import React from 'react';
-import { useMovies } from '../hooks/useMovies';
+import { useBooks } from '../hooks/useBooks';
 
 const CineSelector = () => {
-  const { city, changeCity, darkMode } = useMovies();
+  const { city, changeCity, darkMode } = useBooks();
 
-  const cities = [
-    { value: 'madrid', label: 'Madrid' },
-    { value: 'barcelona', label: 'Barcelona' },
-    { value: 'valencia', label: 'Valencia' },
-    { value: 'sevilla', label: 'Sevilla' }
+  const locations = [
+    { value: 'madrid', label: '🏛️ Madrid' },
+    { value: 'barcelona', label: '📚 Barcelona' },
+    { value: 'valencia', label: '☕ Valencia' },
+    { value: 'sevilla', label: '🎭 Sevilla' }
   ];
 
   return (
     <div className={`cine-selector ${darkMode ? 'dark' : ''}`}>
       <label htmlFor="city-select">
-        Selecciona tu ciudad:
+        📍 Selecciona tu sucursal Nexus:
       </label>
       <select
         id="city-select"
         value={city}
         onChange={(e) => changeCity(e.target.value)}
       >
-        {cities.map((cityOption) => (
-          <option key={cityOption.value} value={cityOption.value}>
-            {cityOption.label}
+        {locations.map((location) => (
+          <option key={location.value} value={location.value}>
+            {location.label}
           </option>
         ))}
       </select>

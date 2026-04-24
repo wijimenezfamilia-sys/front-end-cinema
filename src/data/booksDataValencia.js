@@ -1,0 +1,57 @@
+// Datos de libros para Valencia - Librería Nexus
+export const booksDataValencia = [
+  {
+    id: 10,
+    title: "Crónica de una Muerte Anunciada",
+    author: "Gabriel García Márquez",
+    category: "Drama",
+    format: "Física",
+    price: "$15.99",
+    isbn: "978-0140156119",
+    rating: "8.5/10",
+    stock: 13,
+    availability: true,
+    image: "https://via.placeholder.com/300x400/228B22/ffffff?text=Muerte+Anunciada",
+    publisher: "Sudamericana",
+    year: 1981,
+    pages: 120,
+    language: "Español",
+    description: "Una novela corta pero impactante sobre un crimen inevitable. Masterclass de García Márquez en la narrativa."
+  },
+  {
+    id: 11,
+    title: "Rayuela",
+    author: "Julio Cortázar",
+    category: "Experimental",
+    format: "Física",
+    price: "$25.99",
+    isbn: "978-8485635009",
+    rating: "8.1/10",
+    stock: 5,
+    availability: true,
+    image: "https://via.placeholder.com/300x400/FFFF00/000000?text=Rayuela",
+    publisher: "Sudamericana",
+    year: 1963,
+    pages: 635,
+    language: "Español",
+    description: "Novela antinovela que revolucionó la literatura. Una experiencia de lectura única con múltiples caminos narrativos."
+  },
+  {
+    id: 12,
+    title: "Orgullo y Prejuicio",
+    author: "Jane Austen",
+    category: "Romance",
+    format: "Digital",
+    price: "$11.99",
+    isbn: "978-0141439518",
+    rating: "8.8/10",
+    stock: 16,
+    availability: true,
+    image: "https://via.placeholder.com/300x400/87CEEB/ffffff?text=Orgullo+Prejuicio",
+    publisher: "Penguin Classics",
+    year: 1813,
+    pages: 279,
+    language: "Inglés",
+    description: "Clásico romance de la literatura inglesa. Una crítica social brillante envuelta en una historia de amor."
+  }
+];

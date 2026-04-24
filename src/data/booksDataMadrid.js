@@ -1,0 +1,57 @@
+// Datos de libros para Madrid - Librería Nexus
+export const booksDataMadrid = [
+  {
+    id: 4,
+    title: "El Amor en los Tiempos del Cólera",
+    author: "Gabriel García Márquez",
+    category: "Romance",
+    format: "Física",
+    price: "$22.99",
+    isbn: "978-0307474728",
+    rating: "8.8/10",
+    stock: 10,
+    availability: true,
+    image: "https://via.placeholder.com/300x400/FF0000/ffffff?text=Amor+Cholera",
+    publisher: "Sudamericana",
+    year: 1985,
+    pages: 348,
+    language: "Español",
+    description: "Una historia de amor que trasciende el tiempo. La novela magistral de García Márquez sobre la pasión y la longevidad del amor."
+  },
+  {
+    id: 5,
+    title: "La Casa de los Espíritus",
+    author: "Isabel Allende",
+    category: "Ficción",
+    format: "Física",
+    price: "$19.99",
+    isbn: "978-0553275468",
+    rating: "8.5/10",
+    stock: 14,
+    availability: true,
+    image: "https://via.placeholder.com/300x400/800080/ffffff?text=Casa+Espiritus",
+    publisher: "Sudamericana",
+    year: 1982,
+    pages: 432,
+    language: "Español",
+    description: "Una saga familiar que abarca varias generaciones. La obra maestra de Allende combinando realismo mágico con historia chilena."
+  },
+  {
+    id: 6,
+    title: "Fundación",
+    author: "Isaac Asimov",
+    category: "Ciencia Ficción",
+    format: "Digital",
+    price: "$13.99",
+    isbn: "978-0553293357",
+    rating: "8.6/10",
+    stock: 6,
+    availability: true,
+    image: "https://via.placeholder.com/300x400/FFD700/ffffff?text=Fundacion",
+    publisher: "Bantam",
+    year: 1951,
+    pages: 255,
+    language: "Inglés",
+    description: "El inicio de la serie Fundación. Una visión épica del futuro galáctico y la psicohistoria."
+  }
+];

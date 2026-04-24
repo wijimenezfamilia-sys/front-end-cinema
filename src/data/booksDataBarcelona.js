@@ -1,0 +1,57 @@
+// Datos de libros para Barcelona - Librería Nexus
+export const booksDataBarcelona = [
+  {
+    id: 1,
+    title: "Cien años de soledad",
+    author: "Gabriel García Márquez",
+    category: "Ficción",
+    format: "Física",
+    price: "$24.99",
+    isbn: "978-0060976675",
+    rating: "9.2/10",
+    stock: 15,
+    availability: true,
+    image: "https://via.placeholder.com/300x400/0066cc/ffffff?text=Cien+años",
+    publisher: "Sudamericana",
+    year: 1967,
+    pages: 417,
+    language: "Español",
+    description: "Una novela épica que cuenta la historia de la familia Buendía en el pueblo ficticio de Macondo. Considerada una de las obras maestras de la literatura latinoamericana del siglo XX."
+  },
+  {
+    id: 2,
+    title: "El Quijote",
+    author: "Miguel de Cervantes",
+    category: "Clásicos",
+    format: "Física",
+    price: "$18.99",
+    isbn: "978-0060976675",
+    rating: "8.9/10",
+    stock: 12,
+    availability: true,
+    image: "https://via.placeholder.com/300x400/8B4513/ffffff?text=Quijote",
+    publisher: "Anaya",
+    year: 1605,
+    pages: 992,
+    language: "Español",
+    description: "La novela de Don Quijote de la Mancha, una de las obras más importantes de la literatura española. Un caballero andante en busca de aventuras."
+  },
+  {
+    id: 3,
+    title: "1984",
+    author: "George Orwell",
+    category: "Distopía",
+    format: "Digital",
+    price: "$12.99",
+    isbn: "978-0451524935",
+    rating: "8.7/10",
+    stock: 8,
+    availability: true,
+    image: "https://via.placeholder.com/300x400/FF6347/ffffff?text=1984",
+    publisher: "Signet Classics",
+    year: 1949,
+    pages: 328,
+    language: "Inglés",
+    description: "Novela distópica sobre un régimen totalitario. Una advertencia atemporal sobre el control del poder y la pérdida de libertad individual."
+  }
+];

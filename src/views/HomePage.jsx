@@ -1,17 +1,17 @@
 import React from 'react';
 import CineSelector from '../components/CineSelector';
-import Pelicula from '../components/Pelicula';
-import { useMovies } from '../hooks/useMovies';
+import Libro from '../components/Libro';
+import { useBooks } from '../hooks/useBooks';
 
 const HomePage = () => {
-  const { movies, darkMode } = useMovies();
+  const { books, darkMode } = useBooks();
 
   return (
     <div className={`home-page ${darkMode ? 'dark' : ''}`}>
       <CineSelector />
 
-      {movies.map((movie) => (
-        <Pelicula key={movie.id} movie={movie} />
+      {books.map((book) => (
+        <Libro key={book.id} book={book} />
       ))}
     </div>
   );

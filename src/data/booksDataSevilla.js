@@ -1,0 +1,57 @@
+// Datos de libros para Sevilla - Librería Nexus
+export const booksDataSevilla = [
+  {
+    id: 7,
+    title: "La Sombra del Viento",
+    author: "Carlos Ruiz Zafón",
+    category: "Misterio",
+    format: "Física",
+    price: "$21.99",
+    isbn: "978-8466319522",
+    rating: "8.7/10",
+    stock: 11,
+    availability: true,
+    image: "https://via.placeholder.com/300x400/FF4500/ffffff?text=Sombra+Viento",
+    publisher: "Planeta",
+    year: 2001,
+    pages: 487,
+    language: "Español",
+    description: "Un misterio envuelto en el Barcelona de la posguerra. Una novela gótica moderna llena de intriga."
+  },
+  {
+    id: 8,
+    title: "Don Quijote de la Mancha - Parte II",
+    author: "Miguel de Cervantes",
+    category: "Clásicos",
+    format: "Física",
+    price: "$17.99",
+    isbn: "978-0060976682",
+    rating: "8.4/10",
+    stock: 9,
+    availability: true,
+    image: "https://via.placeholder.com/300x400/4169E1/ffffff?text=Quijote+II",
+    publisher: "Anaya",
+    year: 1615,
+    pages: 891,
+    language: "Español",
+    description: "La continuación de las aventuras de Don Quijote. Una obra imprescindible de la literatura española."
+  },
+  {
+    id: 9,
+    title: "El Nombre de la Rosa",
+    author: "Umberto Eco",
+    category: "Misterio",
+    format: "Digital",
+    price: "$14.99",
+    isbn: "978-0156027328",
+    rating: "8.3/10",
+    stock: 7,
+    availability: true,
+    image: "https://via.placeholder.com/300x400/8B4513/ffffff?text=Nombre+Rosa",
+    publisher: "Bompiani",
+    year: 1980,
+    pages: 637,
+    language: "Italiano/Español",
+    description: "Un crimen en un monasterio medieval. Una novela densa y fascinante sobre la semiótica y el poder."
+  }
+];

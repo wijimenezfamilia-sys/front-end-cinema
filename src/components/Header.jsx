@@ -1,11 +1,11 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../context/AuthContext';
-import { useMovies } from '../hooks/useMovies';
+import { useBooks } from '../hooks/useBooks';
 
 const Header = () => {
   const { user, setUser } = useContext(AuthContext);
-  const { getCurrentCityName, darkMode, toggleDarkMode } = useMovies();
+  const { getCurrentLocationName, darkMode, toggleDarkMode } = useBooks();
 
   const handleLogout = () => {
     setUser(null);
@@ -15,20 +15,21 @@ const Header = () => {
     <header className={darkMode ? 'dark' : ''}>
       <div className="header-content">
         <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
-          <h1>🎬 UNIR Cinema - {getCurrentCityName()}</h1>
+          <h1>📚 Nexus Librería - {getCurrentLocationName()}</h1>
         </Link>
 
         <nav className="header-nav">
-          <Link to="/" className="nav-link">Inicio</Link>
-          <Link to="/about" className="nav-link">Nosotros</Link>
+          <Link to="/" className="nav-link">📖 Catálogo</Link>
+          <Link to="/about" className="nav-link">ℹ️ Sobre Nexus</Link>
+          <Link to="/cart" className="nav-link">🛒 Carrito</Link>
           {user && user.role === 'admin' && (
-            <Link to="/admin" className="nav-link">Admin</Link>
+            <Link to="/admin" className="nav-link">⚙️ Admin</Link>
           )}
         </nav>
 
         <div className="header-controls">
           <button className="dark-mode-toggle" onClick={toggleDarkMode}>
-            {darkMode ? '☀️ Modo Claro' : '🌙 Modo Oscuro'}
+            {darkMode ? '☀️ Claro' : '🌙 Oscuro'}
           </button>
 
           {user ? (
